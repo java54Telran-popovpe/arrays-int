@@ -24,9 +24,13 @@ int[] array = {10, 25, 30, 40, 100};
 		int[] arrayActualLast = insertNumber(array, 5, 25);
 		int[] arrayActualFirst = insertNumber(array, 0, 25);
 		int[] arrayActualMiddle = insertNumber(array, 3, 25);
+		int[] arrayActualOutOfUpperIndex = insertNumber(array, 10, 25);
+		int[] arrayActualOutOfLowerIndex = insertNumber(array, -10, 25);
 		assertArrayEquals( arrayExpectedLast, arrayActualLast);
 		assertArrayEquals( arrayExpectedFirst, arrayActualFirst);
 		assertArrayEquals( arrayExpectedMiddle, arrayActualMiddle);
+		assertArrayEquals( null, arrayActualOutOfUpperIndex);
+		assertArrayEquals( null, arrayActualOutOfLowerIndex);
 	}
 	@Test 
 	void removeNumberTest() {
@@ -37,9 +41,13 @@ int[] array = {10, 25, 30, 40, 100};
 		int[] arrayActualLast = removeNumber(array, array.length - 1);
 		int[] arrayActualFirst = removeNumber(array, 0);
 		int[] arrayActualMiddle = removeNumber(array, 2);
+		int[] arrayActualOutOfUpperIndex = removeNumber(array, 10);
+		int[] arrayActualOutOfLowerIndex = removeNumber(array, -10);
 		assertArrayEquals( arrayExpectedLast, arrayActualLast);
 		assertArrayEquals( arrayExpectedFirst, arrayActualFirst);
 		assertArrayEquals( arrayExpectedMiddle, arrayActualMiddle);
+		assertArrayEquals( null, arrayActualOutOfUpperIndex);
+		assertArrayEquals( null, arrayActualOutOfLowerIndex);
 	}
 	
 	@Test 
@@ -51,6 +59,7 @@ int[] array = {10, 25, 30, 40, 100};
 		int[] arrayActualLast = insertSorted( array, 150);
 		int[] arrayActualFirst = insertSorted( array, 10 );
 		int[] arrayActualMiddle = insertSorted( array, 35 );
+		
 		assertArrayEquals( arrayExpectedLast, arrayActualLast);
 		assertArrayEquals( arrayExpectedFirst, arrayActualFirst);
 		assertArrayEquals( arrayExpectedMiddle, arrayActualMiddle);

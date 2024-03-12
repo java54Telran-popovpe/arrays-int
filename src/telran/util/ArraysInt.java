@@ -12,6 +12,10 @@ public class ArraysInt {
 	}
 	//Insert a new element in the end of array, if position is wrong - do nothing
 	public static int[] insertNumber( int[] array, int index, int number) {
+		
+		if ( index < 0 || index > array.length )
+			return null;
+		
 		int[] result = new int[array.length + 1];
 		result[index] = number;
 		if ( index > 0 )
@@ -22,6 +26,10 @@ public class ArraysInt {
 	}
 	//Remove  element in the end of array, if position is wrong - do nothing
 	public static int[] removeNumber( int[] array, int index) {
+		
+		if ( index < 0 || index > array.length - 1 )
+			return null;
+		
 		int[] result = new int[array.length -1 ];
 		if ( index > 0 )
 			System.arraycopy(array, 0, result, 0 , index);
