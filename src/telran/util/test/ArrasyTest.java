@@ -29,8 +29,8 @@ int[] array = {10, 25, 30, 40, 100};
 		assertArrayEquals( arrayExpectedLast, arrayActualLast);
 		assertArrayEquals( arrayExpectedFirst, arrayActualFirst);
 		assertArrayEquals( arrayExpectedMiddle, arrayActualMiddle);
-		assertArrayEquals( null, arrayActualOutOfUpperIndex);
-		assertArrayEquals( null, arrayActualOutOfLowerIndex);
+		assertArrayEquals( new int[] {}, arrayActualOutOfUpperIndex);
+		assertArrayEquals( new int[] {}, arrayActualOutOfLowerIndex);
 	}
 	@Test 
 	void removeNumberTest() {
@@ -46,8 +46,8 @@ int[] array = {10, 25, 30, 40, 100};
 		assertArrayEquals( arrayExpectedLast, arrayActualLast);
 		assertArrayEquals( arrayExpectedFirst, arrayActualFirst);
 		assertArrayEquals( arrayExpectedMiddle, arrayActualMiddle);
-		assertArrayEquals( null, arrayActualOutOfUpperIndex);
-		assertArrayEquals( null, arrayActualOutOfLowerIndex);
+		assertArrayEquals( new int[] {}, arrayActualOutOfUpperIndex);
+		assertArrayEquals( new int[] {}, arrayActualOutOfLowerIndex);
 	}
 	
 	@Test 

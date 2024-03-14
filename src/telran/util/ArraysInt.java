@@ -14,7 +14,7 @@ public class ArraysInt {
 	public static int[] insertNumber( int[] array, int index, int number) {
 		
 		if ( index < 0 || index > array.length )
-			return null;
+			return new int[] {};
 		
 		int[] result = new int[array.length + 1];
 		result[index] = number;
@@ -28,7 +28,7 @@ public class ArraysInt {
 	public static int[] removeNumber( int[] array, int index) {
 		
 		if ( index < 0 || index > array.length - 1 )
-			return null;
+			return new int[] {};
 		
 		int[] result = new int[array.length -1 ];
 		if ( index > 0 )
